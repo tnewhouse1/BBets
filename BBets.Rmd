@@ -32,3 +32,40 @@ output: html_document: default
 
 <!--Discussion and conclusion here.  If professor Brownlow is consistantly making or losing money how could he change his payout so that his profits center on zero?  Also discuss what size his class should be in order to have his current scheme balance at zero profit.!-->
 
+Based on our simulations, we learn that Professor Brownlow is consistently making money. To have his balance at zero profit we will change the class size but keep it at a 2:1 bet. Through the simulations, we learned that the class size needs to be around 28-29 students. In this particular simulation, the class size is 29 and Professor Brownlow's profit is lower than when he had a class size of 35.
+
+
+```{r}
+buildDY <- function(csize=35){
+  bdlist=1:365
+  out <- sample(bdlist,csize,replace=T)
+}
+```
+
+```{r}
+maxdup = function(inlist){
+    out <- max(table(inlist))
+}
+```
+
+
+```{r}
+bucket=numeric()
+for (j in 1:10){
+  
+
+
+brownlow=0
+trials = numeric()
+
+for (i in 1:1137) {
+  a<-buildDY(csize = 29)
+  trials[i] = maxdup(a)
+ 
+}
+
+out <- ifelse(trials>=2,1,-2) 
+bucket[j] <- sum(out)
+}
+```
+
