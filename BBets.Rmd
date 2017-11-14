@@ -25,7 +25,15 @@ output: html_document: default
 
 # Confidence interval of Brownlows earning
 
+```{r}
+mean(bucket)
+```
+```{r}
+sd(bucket)
+```
 
+
+The confidence interval would be between 400 and 600, using the 68/95 rule. The standard deviation is close to 40. By following the standard deviation rule, two down and two up, the range is from 35 to 39.
 
 
 # Discussion and Conclusion
